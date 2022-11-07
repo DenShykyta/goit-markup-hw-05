@@ -472,14 +472,12 @@ section {
     transform: scale(1);
     background-color: rgba(0, 0, 0, 0.2);
 
-    transition: opacity var(--animation), visibility var(--animation), transform var(--animation);
+    transition: opacity var(--animation), transform var(--animation);
 }
 .backdrop.is-hidden {
-    opacity: 0;
-    visibility: hidden;
+    opacity:0;
     pointer-events: none;
     transform: scale(0.2);
-
 }
 .modal {
     position: absolute;
@@ -488,8 +486,8 @@ section {
     left: 50%;
     transform: translate(-50%, -50%);
 
-    width: 528px;
-    height: 581px;
+    min-width: 528px;
+    min-height: 581px;
     background: var(--hero-text-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
@@ -580,11 +578,11 @@ section {
     height: 100%;
     background-color: rgba(33, 150, 243, 0.9);
     transform: translateY(101%);
-    transition: transform var(--animation);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .progect-item:hover .progect-overlay-box {
     transform: translateY(0);
-    }
+}
 
 .progect-overlay-text {
     font-weight: 400;
